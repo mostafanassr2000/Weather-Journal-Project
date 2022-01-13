@@ -1,0 +1,159 @@
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+body {
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('weather-background.jpg') center/cover no-repeat fixed;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: white;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+label {
+    display: block;
+    font-size: 27px;
+    text-shadow: 0 0 5px black;
+    width: 30vw;
+}
+
+input {
+    display: block;
+    padding: 1rem;
+    height: 40px;
+    width: 30vw;
+    background: #0a1930;
+    border: none;
+    color: white;
+}
+
+textarea {
+    background: #0a1930;
+    padding: 0.5rem;
+    height: 200px;
+    width: 35vw;
+    font-size: 20px;
+    color: white;
+}
+
+button {
+    margin-top: 1rem;
+    border: none;
+    background-color: white;
+    color: #0a1930;
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0a1930;
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: white; 
+    opacity: 50%;
+    font-size: small;
+    padding: 0;
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: white; 
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: white; 
+} 
+
+/*ID's Styles*/
+#app {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 5rem;
+    gap: 2rem;
+}
+
+#entryHolder {
+    text-align: left;
+}
+
+#entryHolder > * {
+    margin: 2rem;
+    width: 100%;
+    text-shadow: 0 0 10px #0a1930;
+}
+
+#entryHolder:nth-child(even) {
+    background-color: #0a193063;
+    
+}
+
+#error {
+    text-align: center;
+    background-color: rgb(185, 0, 0);
+    color: white;
+    border-radius: 50%;
+    width: 25vw;
+}
+
+/*Classes Styles*/
+.headline {
+    padding: 1rem;
+    background-color: #0a1930;
+    width: 100%;
+    display: block;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10rem;
+}
+
+.actions > * {
+    margin-bottom: 2rem;
+}
+
+.entry {
+    background: rgba(59, 74, 107, .4);
+    padding: 2rem;
+    text-align: center;
+}
+
+.title::after {
+    content: '';
+    background-color: white;
+    height: 1px;
+    width: 100%;
+    display: block;
+    margin-top: 1rem;
+}
